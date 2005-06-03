@@ -5,6 +5,7 @@
 
 \newcommand{\duphref}[1]{\href{#1}{#1}}
 \newcommand{\term}[1]{\textbf{#1}}
+\newcommand{\person}[1]{\textbf{#1}}
 
 \title{Five-Year Plan for Scholarship}
 \author{Jeremy D.\ Frens}
@@ -16,27 +17,39 @@
 
 \section*{Purpose}
 
-There is a software crisis (of sorts) today.  Programmers are traditionally and habitually overworked with impossible and imprecise expectations; software is routinely released late and buggy.  Agile software development is a modern attempt to address these issues.
+There is a software crisis (of sorts) today.  Programmers are traditionally and habitually overworked with impossible and imprecise expectations; software is routinely released late and buggy.  Agile software development is a fresh, modern attempt to address these issues.
 
 \term{Agile software development} favors people over process, product, and documentation.  So programmers are not overworked, specifications are precise, and software is delivered on time.  Agile software development also favors writing simple, tested code.
 
 My main interest is in \term{test-driven development} (TDD), a key component to just about all agile development techniques.  Using TDD, a programmer first writes a test in code for a new feature, and this test will fail; the code is \term{refactored} (textually changed without changing behavior) so that new code can be added; then new code is added for the new feature.  The code is refactored and modified until all of the tests, new and old, pass.  This process is known as \term{unit testing} the code.  By working on the code incrementally like this, the software system will grow into the final product, being tested at each step along the way.
 
-I have found this process to be amazingly effective in my own software projects; I am interested in how TDD is effective and how it can be made more effective.  I have most recently started to think about using TDD development in the courses I teach.  I am already using unit testing in our introductory programming course; the students use it as a basic tool to make sure that their computation code works correctly.  Inspired by that success, I have thought about how to work all of TDD into the curriculum.  Introductory students do not have the skill set to do any real refactoring, so full TDD is beyond their reach.  After three or more semesters of programming, though, some simple refactoring is well within a student's reach.  I have recently come to realize that TDD may have certain advantages pedegogically.  At each stage of development, students will have a working system, front to back; as each new feature is added, different parts of the system will be stressed in different ways.  Perhaps one week is spent changing the input library a lot; the following week, some intermediate computations are modified; but each week, the student has a complete working system.
+I have found this process to be amazingly effective in my own software projects; I am interested in how TDD is effective and how it can be made more effective.  Many of my minor software projects are based on interrests I have in a new tools for TDD.
+
+I have most recently started to think about using TDD development in my teaching.  I am already using unit testing in our introductory programming course; the students use it as a basic tool to make sure that their computation code works correctly.  I would like to integrate unit testing into more of our courses.  I have also thought about how to work all of TDD into the curriculum.  Introductory students do not have the skill set to do any real refactoring, so full TDD is beyond their reach.  After three or more semesters of programming, though, some simple refactoring is well within a student's reach.
+
+I have very recently come to realize that using TDD in an upper-level course may have some pedagogical advantages.  Traditional approaches end up stressing the depth of early stages of a system for students who get behind and run out of time for the latter stages.  Using TDD, students will have entire software systems each week, exposing them to the breadth of the fundamental material.
 
 \section*{My Research}
 
 Completed work:
 \begin{itemize}
-\item \textit{Hands on Testing Java}, a lab manual for introductory Java programming using JUnit, a unit-testing library.
+\item \textit{Hands on Testing Java}, a lab manual for introductory Java programming using JUnit, a unit-testing library.  I have used this for five semesters now in CS~108; it is probably time for another serious review due to the knowledge I have gain over the last year.
 \item ``Fifteen Compilers in Fifteen Days'', a prototype interim course done Spring 2005 with Andy Meneely.  Pending: finish compiler, SIGCSE 2006 paper.
+\item ANTLR testing library (cf. http://www.norecess.org/Software/ANTLRTesting/).  I have released this to the larger software community, but I have no idea how many (if any) are using it.  My Programming Languages and Compilers students have used it in their coding.  Some new features need to be added to the library.
+\item No Latte (cf. http://nolatte.sf.net/).  This is a programming language for writing web pages.  I use No Latte myself for my own web pages, and I have used TDD to build the interpreter.  The interpreter is currently quite useable, but a few more features would make it even better.
 \end{itemize}
 
-Future work:
+Current and future work:
 \begin{itemize}
+\item Add unit testing to CS~112 and CS~212.  These are the second and third courses taken by a computer-science major.  It would be helpful (to the student) to continue the unit-testing habits taught in CS~108, plus the instructors can use the unit tests to check the students' work.
 \item ``Fifteen Raytracers in Fifteen Days'', a prototype interim course done Spring 2006 (perhaps with Meneely and/or others).  SIGCSE 2007 paper, OOPSLA 2006 paper.
-\item Incremental, TDD programming languages.  Rework labs of Programming Languages course to implement one feature per week.  See if lab manual is interesting to publishers.
+\item Incremental, TDD programming languages.  Rework labs of Programming Languages course to implement one feature per week for Spring~2006.  See if lab manual is interesting to publishers.
+  \begin{itemize}
+  \item Check into CCLI grant from NSF.
+  \item Check with someone in Education (e.g., Ron Sjoerdsma) on effectiveness of this teaching approach.
+  \end{itemize}
 \item CCEL Desktop.  Use TDD (and other agile development practices) to work on CCEL desktop software.
+\item Plan and execute sabbatical, school year 2006--2007.  Externship one semester: work at local software company that uses agile software development.  Other semester? work on Programming Languages lab manual? work on CCEL Desktop?
 \end{itemize}
 
 Agile software development and TDD are not embraced by all practitioners or educators.  My goal is to show that TDD can be used to teach upper-level courses (as well as provide an outlet for students to practice TDD); in fact, I hope to show that there are distinct pedegogical advantages of using a TDD approach, despite the overhead of teaching TDD itself.
@@ -53,9 +66,35 @@ Agile software development and TDD are not embraced by all practitioners or educ
 
 \begin{itemize}
 \item It would be good to see how real unit tests are written in real projects.
-\item Am I using all of the useful tools I can?
 \item Student guinea pigs (like Meneely).
-\item Resource: CVS server.
 \end{itemize}
+
+\section*{Network}
+
+\begin{itemize}
+\item \person{Joel Adams} (CS~112) and \person{Harry Plantinga} (CS~212) and perhaps \person{Pat Bailey} (IS~271) can work with me (to whatever degree) on integrating unit testing into introductory courses.
+\item \person{Harry Plantinga} for further work on the CCEL Desktop.
+\item \person{Larry Nyhoff} and \person{Joel Adams} for getting unit-testing and incremental-instruction lab manuals to a publisher.
+\item \person{Carl Erikson} runs Atomic Objects here in Grand Rapids, a software company using Extreme Programming.  Carl is also a key (the key?) person for XPwm (Extreme Programming in West Michigan).
+\item \person{Joe Bergin} (in Chicago?) and \person{James Caristi} (at Valparaiso University) use many agile techniques in their teaching.
+\end{itemize}
+
+\section*{Work Plan}
+
+Missing CCEL Desktop!
+
+\noindent\begin{tabular}{|p{1in}|p{1in}|p{1in}|p{1in}|p{1in}|p{1in}|}
+\hline
+  & Incremental compiler & Incremental raytracer & ANTLR testing & No Latte & Incremental PL \\
+\hline
+\hline
+Spring 2005 & code & & & maintain & \\
+\hline
+Summer 2005 & code & & improve & add features & plan \\
+            & SIGCSE paper & & publish better & & \\
+\hline
+Fall   2005 & submit paper & plan & maintain & maintain & write labs \\
+\hline
+\end{tabular}
 
 \end{document}
