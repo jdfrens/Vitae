@@ -7,7 +7,7 @@
 \newcommand{\term}[1]{\textbf{#1}}
 \newcommand{\person}[1]{\textbf{#1}}
 
-\title{Sabbatical Proposal for Spring 2007}
+\title{Sabbatical Proposal for Interim \& Spring 2007}
 \author{Jeremy D.\ Frens}
 \date{}
 
@@ -17,10 +17,74 @@
 
 \section*{Eligibility}
 
-   1.  Leaves of absence shall be extended only to those in teaching positions at the rank of Assistant Professor and above, to full-time administrators, and to professional librarians of equivalent professorial rank. Faculty members with reduced-load appointments are eligible for sabbaticals with pro-rated salary.
-   2. A person will be eligible after completing six (6) years of service in a professorial rank or its equivalent at Calvin College. A person who has had a sabbatical is not again eligible until he or she has completed another six (6) years of service at Calvin College. The time spent in any leave of absence is not counted in the six years required for eligibility for a sabbatical.
-   3. A sabbatical leave shall be granted primarily on the basis of an evaluation of the worthwhileness of the project to be undertaken. Secondary consideration will be given to the number of years in service without a leave. An applicant, to be eligible for a sabbatical, must give evidence of having done preliminary research or of having engaged in scholarly or professional activity related directly to preparation for the projected leave of absence.
-   4. Eligible persons are not entitled to a sabbatical leave; it is granted only after adequate consideration has been given to the application and to the needs and interests of the college. Planning for a sabbatical leave must not be done without first consulting the department chair and the academic dean of the division.
+\begin{itemize}
+\item I am an Assistant Professor.
+\item I am finishing my sixth year here at Calvin as Assistant Professor.
+\item My preliminary research is described in the proposal below.
+\item My department chair blesses my sabbatical.
+\end{itemize}
 
+\section*{The Project}
+
+\emph{I propose to use incremental development to teach programming languages.}
+
+\subsection*{Programming-Languages Interpreter Project}
+
+A programming languages course, like the one I teach each fall, explores the different types of programming languages and the different features of these langauges.  One way to motivate the learning in this course is to ask the students to implement an interpreter.  An interpreter is a program that reads in \emph{another} program and runs the commands in that other program.  Interpreters are relatively easy to write, and they can be changed in very small ways to have a huge impact on the way they execute the same code.
+
+An interpreter usually consists of three phases: a lexer, a parser, and the interpreter itself; one phase feeds into the next.  Traditionally, these three phases are completed as programming assignments in three separate stages.  As is often the case, students fall behind in the course, and so by the end of the course, they may have very little of the interpreter itself written while they know a lot about the parser and even more about the lexer.  It is preferrable by far that a student have an equal understanding of each of the three phases.
+
+\subsection*{Incremental Development}
+
+Incremental development is a process for developing software where a complete program is built at each stage of development.  Features are added one at a time, until the desired program is built.  One way to implement incremental development is to use test-driven development (TDD).
+
+Test-driven development is an approach to writing code where tests for a computation are written \emph{before} the computation is implemented.  If I write a library to compute square roots, I first write five or six tests which test various square roots (e.g., ``I expect to get $5$ when I compute the square root of $25$'').  These tests fail because I do not have code yet for the right computation; however, I know that the tests are active because I see them fail.  I then write computation code for computing the square root; I know when I am finished writing computation code when all of my tests pass.
+
+Since the tests are relatively small, they are executed \emph{very} frequently.  As I add new features, my old tests make sure that I do not break any old code.
+
+TDD also uses a process known as ``refactoring'' to change existing code \emph{without} changing the observed computations.  Refactoring is used to modify the code so that new features can be added and also to simplify code after new features have been added.
+
+Refactoring allows for new features to be added relatively easily, so it provides incremental development.  The tests provide a safety net to make sure that refactoring do not break any features.
+
+\subsection*{Incremental Development of an Interpreter}
+
+My project is to develop the resources (i.e., lab manuals, software) needed by students to write an interpreter in a programming languages class using incremental development.
+
+The main benefit of this approach is that students will work on a complete interpreter from the first week until the end of the project.  Each week, new features will be added, which will require the students to change each phase of their interpreter.  The first interpreter will be very simple, but even halfway through the semester, students will be working with the fundamental aspects of an interpreter.  So a student who falls so far behind that he gets only half of the project done will still see a fair amount of each of the three phases---the knowledge such a student \emph{should} have.
+
+Another benefit of this approach is that it allows for instructional flexibility.  Each student might be asked to implement a different feature as a final project.  Honors students can pick their own features they would like to implement.
+
+The tools used in TDD are a practical benefit.  The tools we would use (e.g., Eclipse for editing code and for easy refactoring, JUnit for testing) are used in industry, and the techniques learned are applicable on any programming project.
+
+My deliverables would include the following:
+\begin{itemize}
+\item A lab manual for TDD instruction and incremental development of an interpreter.
+\item Software (i.e., library support) built for incremental development of an interpreter.
+\end{itemize}
+
+  % A detailed description of the project. Depending on the nature of the project, this should include the goals, major theses, outline, and methods of the project. The description should also include the place of the project in the particular area of study; i.e., why it should be done and how the proposed study will contribute to an understanding of the issues. The description should include reference to the literature that is relevant to the project.
+
+\section*{Qualifications}
+
+I am quite familiar with TDD and incremental development.  I have used TDD in several programming projects of my own, including one public project, an interpreter for a language called Latte (see attached vitae).  I have also created my own library for testing lexers and parsers (see attached vitae).  I have six significant personal projects which were developed using TDD.
+
+I also plan to get hands-on experience with TDD as part of an externship at Atomic Object, a local company in Grand Rapids.  Atomic Object uses incremental development and TDD.  This externship will be done the Fall semester before this sabbatical.
+
+In terms of the pedogical aspects of my project, I have rewritten the lab manual for our introductory programming course (see attached vitae).  I focus primarily on the testing aspects of TDD, because refactoring is a little too advanced for beginning programmers.
+
+Finally, I have already tried out this intructional approach with a student who took a compiler course as an independent study.  We used incremental development to build a complete compiler each week of the semester; since a compiler is similar to an interpreter, this was good practice for this particular project.  The student and I have written a paper (see attached) which we submitted to SIGCSE 2006, a conference on Computer Science education.
+
+  % A statement of the qualifications of the applicant for pursuing the proposed project. This should include prior preparation for work in the area of the proposed study, a list of grants received or pending during the last five years, and the results of previous sabbaticals or leaves of absence, including a copy of the previous sabbatical report, if any. A curriculum vitae, which may be in a condensed form that includes all relevant information, shall be attached.
+
+  % 5. Expected benefits of the project to the applicant, the profession, and the college.
+
+  % 6. A work schedule and itinerary projected for the duration of the leave.
+
+  % 7. A financial budget for the period of leave. This should be an estimate of expenses including support services provided by the college. Include an explanation of the expenses and indicate the source of funds for meeting expenses beyond the salary provided by the college. The applicant should report on what steps have been taken to seek outside support for the sabbatical. Approval of the proposal does not constitute approval of the project budget beyond the salary.
+
+\section*{Remuneration Statement}
+
+I will not accept other remunerative employment without consent of the college, and I agree to the college policy on remuneration received from any product of my sabbatical leave.
 
 \end{document}
+
