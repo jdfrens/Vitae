@@ -1,3 +1,5 @@
+
+
 % resume.tex
 %
 % (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
@@ -5,159 +7,155 @@
 % (c) 2007 Jeremy D. Frens <jdfrens@gmail.com> http://www.norecess.org/
 %
 %This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
-
 \documentclass[letterpaper,11pt]{article}
 
 %-----------------------------------------------------------
 %Margin setup
+\setlength{\voffset}{0.1in} \setlength{\paperwidth}{8.5in} \setlength{\paperheight}{11in} \setlength{
+\headheight}{0in} \setlength{
+\headsep}{0in} \setlength{
+\textheight}{11in} \setlength{ 
+\textheight}{9.5in} \setlength{ 
+\topmargin}{-0.25in} \setlength{ 
+\textwidth}{7in} \setlength{\topskip}{0in} \setlength{ 
+\oddsidemargin}{-0.25in} \setlength{ 
+\evensidemargin}{-0.25in}
 
-\setlength{\voffset}{0.1in}
-\setlength{\paperwidth}{8.5in}
-\setlength{\paperheight}{11in}
-\setlength{\headheight}{0in}
-\setlength{\headsep}{0in}
-\setlength{\textheight}{11in}
-\setlength{\textheight}{9.5in}
-\setlength{\topmargin}{-0.25in}
-\setlength{\textwidth}{7in}
-\setlength{\topskip}{0in}
-\setlength{\oddsidemargin}{-0.25in}
-\setlength{\evensidemargin}{-0.25in}
 %-----------------------------------------------------------
 %\usepackage{fullpage}
 \usepackage{shading}
+
 %\textheight=9.0in
-\pagestyle{empty}
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
+\pagestyle{empty} 
+\raggedbottom 
+\raggedright \setlength{\tabcolsep}{0in}
 
 %-----------------------------------------------------------
 %Custom commands
-\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
-\newcommand{\resheading}[1]{{\large \parashade[.9]{sharpcorners}{\textbf{#1 \vphantom{p\^{E}}}}}}
-\newcommand{\ressubheading}[4]{
-\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
-		\textbf{#1} & #2 \\
-		\textit{#3} & \textit{#4} \\
-\end{tabular*}\vspace{-6pt}}
+\newcommand{\resitem}[1]{ 
+\item #1 \vspace{-2pt}} 
+\newcommand{\resheading}[1]{{\large \parashade[.9]{sharpcorners}{\textbf{#1 \vphantom{p\^{E}}}}}} 
+\newcommand{\ressubheading}[4]{ 
+\begin{tabular*}
+	{6.5in}{l@{\extracolsep{\fill}}r} \textbf{#1} & #2 \\
+	\textit{#3} & \textit{#4} \\
+\end{tabular*}
+\vspace{-6pt}}
+
 %-----------------------------------------------------------
-\newcommand{\comment}[1]{\begin{quote}\textit{#1}\end{quote}}
+\newcommand{\comment}[1]{ 
+\begin{quote}
+	\textit{#1} 
+\end{quote}
+}
 
-
-\begin{document}
-
-\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-\textbf{\Large Jeremy D.~Frens}  & 616-308-3979\\
-2720 Harbor Dr. \#304 &  jdfrens-at-gmail.com \\
-Grand Rapids, MI 49512 & http://www.norecess.org/\\
+\begin{document} 
+\begin{tabular*}
+	{7in}{l@{\extracolsep{\fill}}r} \textbf{\Large Jeremy D.~Frens} & 616-308-3979\\
+	2720 Harbor Dr. \#304 & jdfrens-at-gmail.com \\
+	Grand Rapids, MI 49512 & http://www.norecess.org/\\
 \end{tabular*}
 \\
 
 \vspace{0.1in}
 
-
 \resheading{Objective}
 
 Obtain a job as a software developer with some possible management responsibilities.
 
+\resheading{Work Experience in Academia}
 
-\resheading{Work Experience}
-
+% TODO: courses taught
+% TODO: professional committees, Abstraction mentor
+% TODO: student advising
+% TODO: professional organizations
 \begin{itemize}
-\item
-  \ressubheading{Assistant Professor}{Calvin College}{Grand Rapids, MI}{2000--present}
-  \begin{itemize}
-  \resitem{Taught introductory Java course for twelve semesters, introduced JUnit to the course.}
-  \resitem{Taught Programming Languages course.}
-  \end{itemize}
-
-\item
-  \ressubheading{Assistant Professor}{Northwestern College}{Orange City, IA}{1998--2000}
-  \begin{itemize}
-  \resitem{I did what I had to do.}
-  \end{itemize}
-
-\item
-  \ressubheading{Associate Instructor}{Indiana University}{Bloomington, IN}{1992--1998}
-  \begin{itemize}
-  \resitem{Assisted and graded various courses including freshman-level Introduction to C++ and junior-level Data Structures.}
-  \resitem{Taught courses in summer as primary instructor.}
-  \end{itemize}
-
+	\item \ressubheading{Assistant Professor}{Calvin College}{Grand Rapids, MI}{2000--present} 
+	\begin{itemize}
+		\resitem{Taught introductory Java course for twelve semesters, introduced JUnit to the course.} \resitem{Taught Programming Languages course.} 
+	\end{itemize}
+	
+	\item \ressubheading{Java Instructor}{Rapistan/Seimens}{Grand Rapids, MI}{????}
+	
+	\item \ressubheading{Assistant Professor}{Northwestern College}{Orange City, IA}{1998--2000} 
+	\begin{itemize}
+		\resitem{I did what I had to do.} 
+	\end{itemize}
+	
+	\item \ressubheading{Associate Instructor}{Indiana University}{Bloomington, IN}{1992--1998} 
+	\begin{itemize}
+		\resitem{Assisted and graded various courses including freshman-level Introduction to C++ and junior-level Data Structures.}
+		\resitem{Taught courses in summer as primary instructor.} 
+	\end{itemize}
 \end{itemize}
 
-
-\resheading{Leadership Experience}
-
+\resheading{Significant Projects} 
 \begin{itemize}
-\item Provided leadership
-  \begin{itemize}
-  \item Served as project lead on summer project involving Ruby on Rails.
-  \item Mentored students in senior projects invoving large software products.
-  \item Developed some materials for a website course and extensive materials for introductory course (in C++ and Java) and a programming-languages course.
-  \item Taught three times as primary instructor while at Indiana University.
-  \end{itemize}
-
-\item Developed collaborative skills:
-  \begin{itemize}
-  \item Designed the technology side of YAGS
-  \item Offsite externship
-  \end{itemize}
-\end{itemize}
-      
-\resheading{Work Experience}
-\begin{itemize}
-\item
-  \ressubheading{YAGS}{Calvin College}{Project Lead and Sometimes Programmer}{Summer 2007}
-  \begin{itemize}
-  \resitem{Lead two students on a summer project to implement a webapp to simulate Mendelian genetics, suitable for teaching biology students.}
-  \end{itemize}
-
-\item
-  \ressubheading{Department Website}{Calvin College}{Sole Programmers}{January 2007--present}
+	\item \ressubheading{YAGS}{Calvin College}{Project Lead and Sometimes Programmer}{Summer 2007} 
+	\begin{itemize}
+		\resitem{Lead two students on a summer project to implement a webapp to simulate Mendelian genetics, suitable for teaching biology students.} 
+	\end{itemize}
+	
+	% TODO: check dates
+	
+	\item \ressubheading{No Latte}{SourceForge}{Sole Programmer}{Summer 2003--present}
+	
+	% TODO: check dates
+	
+	\item \ressubheading{ANTLR Testing}{SourceForge}{Sole Programmer}{Summer 2003--present}
+	
+	\item \ressubheading{Department Website}{Calvin College}{Sole Programmer}{January 2007--present} 
 \end{itemize}
 
-\resheading{Skills}
+\resheading{Leadership Experience} 
+\begin{itemize}
+	\item Provided leadership 
+	\begin{itemize}
+		\item Served as project lead on summer project involving Ruby on Rails. 
+		\item Mentored students in senior projects involving large software products. 
+		\item Developed some materials for a website course and extensive materials for introductory course (in C++ and Java) and a programming-languages course. 
+		\item Taught three times as primary instructor while at Indiana University. 
+	\end{itemize}
+	
+	\item Developed collaborative skills: 
+	\begin{itemize}
+		\item Designed the technology side of YAGS 
+		\item Offsite externship 
+	\end{itemize}
+\end{itemize}
 
+\resheading{Skills} 
 \begin{description}
-\item[Extensive Experience with these Languages:]
-Java, Ruby, \LaTeX, C/C++, Scheme, PHP, Perl.  % bullet and describe
-\item[Familiarity with These Languages:]
-\item[Operating Systems (administrator):]
-Linux (Gentoo, Ubuntu, SuSE), Mac~OS~X.
-\item[Operating Systems (user):]
-Linux (Gentoo, Ubuntu, SuSE), Mac~OS~X, Solaris, UNIX, Windows~XP.
+	\item[Extensive Experience with these Languages:] Java, Ruby, \LaTeX, C/C++, Scheme, PHP, Perl. 
+	
+	% bullet and describe
+	
+	\item[Familiarity with These Languages:] 
+	\item[Operating Systems (administrator):] Linux (Gentoo, Ubuntu, SuSE), Mac~OS~X. 
+	\item[Operating Systems (user):] Linux (Gentoo, Ubuntu, SuSE), Mac~OS~X, Solaris, UNIX, Windows~XP. 
 \end{description}
 
-
-\resheading{Education}
+\resheading{Education} 
 \begin{itemize}
-\item
-  \ressubheading{Indiana University}{Bloomington, IN}{Ph.D., Computer Science}{2002}
-    \begin{itemize}
-    \resitem{Outstanding Associate Instructor, 1998}
-    \end{itemize}
-
-\item
-  \ressubheading{Indiana University}{Bloomington, IN}{M.S., Computer Science}{1994}
-%    \begin{itemize}
-%    \resitem{Relevant courses: Programming Languages, Compilers (2~semesters), Computer Graphics (2~semesters)}
-%    \end{itemize}
-
-\item
-  \ressubheading{Calvin College}{Grand Rapids, MI}{B.A., Computer Science and Mathematics}{1992}
-    \begin{itemize}
-    \resitem{Awarded the Rinck Prize in mathematics, 1992}
-    \end{itemize}
-
+	\item \ressubheading{Indiana University}{Bloomington, IN}{Ph.D., Computer Science}{2002} 
+	\begin{itemize}
+		\resitem{Outstanding Associate Instructor, 1998} 
+	\end{itemize}
+	
+	\item \ressubheading{Indiana University}{Bloomington, IN}{M.S., Computer Science}{1994}
+	
+	%    \begin{itemize}
+	%    \resitem{Relevant courses: Programming Languages, Compilers (2~semesters), Computer Graphics (2~semesters)}
+	%    \end{itemize}
+	
+	\item \ressubheading{Calvin College}{Grand Rapids, MI}{B.A., Computer Science and Mathematics}{1992} 
+	\begin{itemize}
+		\resitem{Awarded the Rinck Prize in mathematics, 1992} 
+	\end{itemize}
 \end{itemize}
-
 
 \resheading{Publications}
 
 A complete curriculum vitae is available upon request.
 
-
-\end{document}
-
+\end{document} 
