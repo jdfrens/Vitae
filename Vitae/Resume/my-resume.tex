@@ -4,48 +4,58 @@
 %
 % (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
 % (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
-% (c) 2007 Jeremy D. Frens <jdfrens@gmail.com> http://www.norecess.org/
+% (c) 2008 Jeremy D. Frens <jdfrens@gmail.com> http://www.norecess.org/
 %
 %This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
 \documentclass[letterpaper,11pt]{article}
 
 %-----------------------------------------------------------
 %Margin setup
-\setlength{\voffset}{0.1in} \setlength{\paperwidth}{8.5in} \setlength{\paperheight}{11in} \setlength{
-\headheight}{0in} \setlength{
-\headsep}{0in} \setlength{
-\textheight}{11in} \setlength{ 
-\textheight}{9.5in} \setlength{ 
-\topmargin}{-0.25in} \setlength{ 
-\textwidth}{7in} \setlength{\topskip}{0in} \setlength{ 
-\oddsidemargin}{-0.25in} \setlength{ 
-\evensidemargin}{-0.25in}
+\setlength{\voffset}{0.1in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\paperheight}{11in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{11in}
+\setlength{\textheight}{9.5in}
+\setlength{\topmargin}{-0.25in}
+\setlength{\textwidth}{7in}
+\setlength{\topskip}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\evensidemargin}{-0.25in}
 
 %-----------------------------------------------------------
 %\usepackage{fullpage}
 \usepackage{shading}
+\usepackage{hyperref}
 
 %\textheight=9.0in
 \pagestyle{empty} 
 \raggedbottom 
-\raggedright \setlength{\tabcolsep}{0in}
+\raggedright
+
+\setlength{\tabcolsep}{0in}
 
 %-----------------------------------------------------------
 %Custom commands
-\newcommand{\resitem}[1]{ 
-\item #1 \vspace{-2pt}} 
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+
 \newcommand{\resheading}[1]{{\large \parashade[.9]{sharpcorners}{\textbf{#1 \vphantom{p\^{E}}}}}} 
+
 \newcommand{\ressubheading}[4]{ 
-\begin{tabular*}
-	{6.5in}{l@{\extracolsep{\fill}}r} \textbf{#1} & #2 \\
-	\textit{#3} & \textit{#4} \\
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+	\textbf{#1} & #2 \\
+	{#3} & {#4} \\
 \end{tabular*}
 \vspace{-6pt}}
 
+\newcommand{\me}[1]{\emph{#1}}
+
+\newcommand{\duphref}[1]{\href{#1}{#1}}
 %-----------------------------------------------------------
-\newcommand{\comment}[1]{ 
-\begin{quote}
-	\textit{#1} 
+\newenvironment{comment}{
+\begin{quote}\it
+}{
 \end{quote}
 }
 
@@ -59,9 +69,103 @@
 
 \vspace{0.1in}
 
+
+
+
 \resheading{Objective}
 
-Obtain a job as a software developer with some possible management responsibilities.
+Transition my skills from academia into agile software development.
+
+
+
+\resheading{Significant Projects} 
+\begin{itemize}
+	
+	\item \ressubheading{YAGS}{Calvin College}{Project Lead, Occasional Programmer}{Summer 2007}
+		\begin{comment}
+			YAGS (Yet Another Genetics Simulator) is a Ruby-on-Rails webapp that simulates Mendelian genetics to teach genetics to college-level biology students.
+		\end{comment}
+		\begin{itemize}
+			\resitem{Lead the project.}
+			\resitem{Used Extreme Programming.}
+				\begin{itemize}
+					\resitem{Weekly planning meetings with on-site client.}
+					\resitem{Test-driven development.}
+					\resitem{Continuous integration with \href{http://cruisecontrolrb.thoughtworks.com/}{CruiseControl.rb}}
+					\resitem{Week-long iterations.}
+				\end{itemize}
+			\resitem{Developed and reviewed code.}
+		\end{itemize}
+	
+	\item \ressubheading{No Latte}{SourceForge}{Sole Programmer}{Summer 2003--present}
+	  \begin{comment}
+	  	\href{http://nolatte.sourceforge.net/}{No Latte} is an interpreter for a variation of the \href{http://www.latte.org}{Latte} language for writing XHTML documents in a functional-programming style---\LaTeX sensibilities with LISP semantics.
+	  \end{comment}
+		\begin{itemize}
+			\resitem{Written in Java.}
+			\resitem{Using test-driven development with JUnit, EasyMock, and FitNesse.}
+			\resitem{Using \href{http://www.antlr.org/}{ANTLR} for the front-end.}
+			\resitem{Using it for my own static webpages.}
+		\end{itemize}
+	
+	\item \ressubheading{ANTLR Testing}{SourceForge}{Sole Programmer}{Summer 2003--present}
+		\begin{comment}
+			\href{http://antlr-testing.sourceforge.net/}{ANTLR Testing} is a unit-testing library for \href{http://www.antlr.org/}{ANTLR} grammars based on \href{http://junit.org/}{JUnit}.
+		\end{comment}
+		\begin{itemize}
+			\resitem{Written in Java.}
+			\resitem{Used in my No Latte project as well as in my Programming Language course.}
+		\end{itemize}
+	
+	\item \ressubheading{Department Website}{Calvin College}{Sole Programmer}{January 2007--present}
+	  \begin{comment}
+	  	A modest CMS for a department website at Calvin College.
+	  \end{comment}
+	  \begin{itemize}
+	  	\resitem{Written as a Ruby-on-Rails webapp.}
+			\resitem{Fully test driven.}
+	  \end{itemize}
+
+\end{itemize}
+
+\resheading{Leadership Experience}
+
+\begin{itemize}
+	\item Project Leadership 
+	\begin{itemize}
+		\item Taught three courses as primary instructor while at Indiana University. 
+		\item Mentored students in senior projects at Calvin involving large software products.
+		\item Served as project lead on YAGS---two student programmers, one mathematician/developer co-leader, and one biology client. 
+	\end{itemize}
+
+	\item Written Leadership
+	  \begin{itemize}
+	  	\item Wrote reference material for a website administration course.
+	 		\item Retooled laboratory exercises for introductory programming course in C++ (\textit{Hands on C++}).
+	 		\item Retooled and rewrote laboratory exercises for introductory programming course in Java, adding JUnit as a primary development tool (\textit{Hands on Testing Java}).
+			\item Developed and wrote laboratory exercises for programming languages to develop interpreters iteratively using test-driven development.  (See ``15 Compilers in 15 Days'' paper listed below.)
+	  \end{itemize}
+	
+	\item Developed collaborative skills: 
+	\begin{itemize}
+		\item Designed the technology side of YAGS.
+		\item Offsite externship at \href{http://www.atomicobject.com}{Atomic Object, LLC}
+			\begin{itemize}
+				\item Used Extreme Programming for all development.
+				\item Exposed to embedded development, large-database development, and webapp development.
+			\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+
+\resheading{Software Development Experience}
+
+\begin{itemize}
+	\item Using \LaTeX\ since 1990.
+	\item Writing No Latte and ANTLR Testing on my own---lots of Java, JUnit, FitNesse, project management, JAR-building, installer experience.
+	\item Writing Ruby on Rails apps---lots of Ruby, Test::Unit, RSpec, CruiseControl.rb experience.
+\end{itemize}
+
 
 \resheading{Work Experience in Academia}
 
@@ -71,91 +175,122 @@ Obtain a job as a software developer with some possible management responsibilit
 % TODO: professional organizations
 \begin{itemize}
 	\item \ressubheading{Assistant Professor}{Calvin College}{Grand Rapids, MI}{2000--present} 
-	\begin{itemize}
-		\resitem{Taught introductory Java course for twelve semesters, introduced JUnit to the course.} \resitem{Taught Programming Languages course.} 
+	  \begin{itemize}
+		\resitem{Taught a variety of courses.}
+		  \begin{itemize}
+		  \item Introductory programming in C++ and in Java.
+			\item Technical courses in office tools (e.g., Excel, Dreamweaver, PowerPoint).
+			\item Website administration.
+			\item Agile software development.
+			\item Programming languages; compilers.
+		  \end{itemize}
+		\resitem{Added to the curriculum.}
+		\begin{itemize}
+			\item Introduced unit testing in introductory programming course.
+			\item Added many agile techniques to programming languages course.
+		\end{itemize}
+		\resitem{Served on department and college committees.}
+		\resitem{Served as advisor to Abstraction (computer-science student club)}
 	\end{itemize}
 	
 	\item \ressubheading{Java Instructor}{Rapistan/Seimens}{Grand Rapids, MI}{????}
+	\begin{itemize}
+		\resitem Taught Java and object-oriented programming to VisualBasic developers.
+	\end{itemize}
 	
 	\item \ressubheading{Assistant Professor}{Northwestern College}{Orange City, IA}{1998--2000} 
 	\begin{itemize}
-		\resitem{I did what I had to do.} 
+		\resitem{Taught mostly upper-level courses.}
+		  \begin{itemize}
+				\item Data structures.
+		  	\item Programming languages.
+				\item Computer architecture.
+				\item Ray tracing.
+		  \end{itemize}
+		\resitem{Served on department and college committees.}
 	\end{itemize}
 	
 	\item \ressubheading{Associate Instructor}{Indiana University}{Bloomington, IN}{1992--1998} 
 	\begin{itemize}
-		\resitem{Assisted and graded various courses including freshman-level Introduction to C++ and junior-level Data Structures.}
-		\resitem{Taught courses in summer as primary instructor.} 
+		\resitem{Assisted and graded various courses: introductory programming, programming languages, data structures.}
+		\resitem{Taught courses in summer as primary instructor: introductory programming, data structures.}
+		\resitem{Awarded ``Outstanding Associate Instruction'' from Computer Science Department in 1998.}
 	\end{itemize}
 \end{itemize}
 
-\resheading{Significant Projects} 
-\begin{itemize}
-	\item \ressubheading{YAGS}{Calvin College}{Project Lead and Sometimes Programmer}{Summer 2007} 
-	\begin{itemize}
-		\resitem{Lead two students on a summer project to implement a webapp to simulate Mendelian genetics, suitable for teaching biology students.} 
-	\end{itemize}
-	
-	% TODO: check dates
-	
-	\item \ressubheading{No Latte}{SourceForge}{Sole Programmer}{Summer 2003--present}
-	
-	% TODO: check dates
-	
-	\item \ressubheading{ANTLR Testing}{SourceForge}{Sole Programmer}{Summer 2003--present}
-	
-	\item \ressubheading{Department Website}{Calvin College}{Sole Programmer}{January 2007--present} 
-\end{itemize}
-
-\resheading{Leadership Experience} 
-\begin{itemize}
-	\item Provided leadership 
-	\begin{itemize}
-		\item Served as project lead on summer project involving Ruby on Rails. 
-		\item Mentored students in senior projects involving large software products. 
-		\item Developed some materials for a website course and extensive materials for introductory course (in C++ and Java) and a programming-languages course. 
-		\item Taught three times as primary instructor while at Indiana University. 
-	\end{itemize}
-	
-	\item Developed collaborative skills: 
-	\begin{itemize}
-		\item Designed the technology side of YAGS 
-		\item Offsite externship 
-	\end{itemize}
-\end{itemize}
 
 \resheading{Skills} 
 \begin{description}
-	\item[Extensive Experience with these Languages:] Java, Ruby, \LaTeX, C/C++, Scheme, PHP, Perl. 
+	\item Programming
+	  \begin{itemize}
+	  	\item \textbf{Extensive knowledge:} Java, Ruby, \LaTeX, C/C++, Scheme, PHP, Perl.
+		  \item \textbf{Workable knowledge:} Haskell.
+	  \end{itemize}
 	
 	% bullet and describe
-	
-	\item[Familiarity with These Languages:] 
-	\item[Operating Systems (administrator):] Linux (Gentoo, Ubuntu, SuSE), Mac~OS~X. 
-	\item[Operating Systems (user):] Linux (Gentoo, Ubuntu, SuSE), Mac~OS~X, Solaris, UNIX, Windows~XP. 
+	\item Systems
+		\begin{itemize}
+		  \item \textbf{Administration:} Linux (Gentoo, Ubuntu, SuSE), Mac~OS~X. 
+		  \item \textbf{Use:} Linux (Gentoo, Ubuntu, SuSE), Mac~OS~X, Solaris, UNIX, Windows~XP. 
+		\end{itemize}
 \end{description}
 
 \resheading{Education} 
 \begin{itemize}
 	\item \ressubheading{Indiana University}{Bloomington, IN}{Ph.D., Computer Science}{2002} 
 	\begin{itemize}
-		\resitem{Outstanding Associate Instructor, 1998} 
+		\resitem{Specialized in Functional Programming and Programming Languages.}
+		\resitem{Examined the memory and parallelism benefits of a block-recursive decomposition of matrix structures and algorithms.}
+		  \begin{itemize}
+			\item Developed algorithms for matrix-matrix multiplication and $QR$ factorization.
+		  \item Wrote C code in a functional style.
+		  \item Achieved scalable performance without having to retune algorithms for each new architecture.
+		  \end{itemize}
 	\end{itemize}
 	
-	\item \ressubheading{Indiana University}{Bloomington, IN}{M.S., Computer Science}{1994}
-	
-	%    \begin{itemize}
-	%    \resitem{Relevant courses: Programming Languages, Compilers (2~semesters), Computer Graphics (2~semesters)}
-	%    \end{itemize}
+	\item \ressubheading{Indiana University}{Bloomington, IN}{M.S., Computer Science}{1994}	
+	   \begin{itemize}
+	   \resitem{Important courses: Programming Languages, Compilers (2~semesters), Computer Graphics (2~semesters)}
+	   \end{itemize}
 	
 	\item \ressubheading{Calvin College}{Grand Rapids, MI}{B.A., Computer Science and Mathematics}{1992} 
-	\begin{itemize}
+  	\begin{itemize}
+	  \resitem{Important courses: Real Analysis (2~semesters), Linear Algebra, Abstract Algebra, Advanced Logic, Topology, Compilers, Databases, Operating Systems, Programming Languages}
 		\resitem{Awarded the Rinck Prize in mathematics, 1992} 
-	\end{itemize}
+	  \end{itemize}
 \end{itemize}
 
 \resheading{Publications}
 
-A complete curriculum vitae is available upon request.
+A complete curriculum vitae is available upon request.  Copies and access available upon request.
+
+\begin{itemize}
+	\item \textit{Incremental Development of Interpreters}.  In progress, used in Programming Languages Course (Spring 2008) \\\duphref{http://cs.calvin.edu/curriculum/cs/214/jdfrens/Labs/}
+	  \begin{itemize}
+	  	\item Develops interpreters incrementally using test-driven development.
+			\item Uses Java, JUnit, ANTLR, ANTLR Testing, and FitNesse.
+	  \end{itemize}
+	
+	\item ``15 Compilers in 15 Days'' with Andy~Meneely (student).  \textit{Proceedings of the 2006 ACM Symposium on Computer Science Education} (2006 March), 92--95. \\\duphref{http://doi.acm.org/10.1145/1121341.1121372}
+	  \begin{itemize}
+		\item Describes our success at developing compilers incrementally.
+		\item Explains the pedagogical benefits of such an approach.
+		\item Used as motivating basis for \textit{Incremental Development of Interpreters}.
+  	\end{itemize}
+	
+	\item \textit{Hands on C++} (2003), 3e, with Joel C.\ Adams.  Prentice Hall.   \\\duphref{http://cs.calvin.edu/books/c++/intro/3e/HandsOnC++/}
+	  \begin{itemize}
+	  	\item Significant re-write of 2nd edition.
+	  \end{itemize}
+	  
+	\item \textit{Hands on Testing Java} based on material by Joel C.\ Adams and Charles Hoot.  \\\duphref{http://cs.calvin.edu/curriculum/cs/108/HoTJ/}.
+	  \begin{itemize}
+	  	\item Significant re-write of original \textit{Hands on Java}.
+			\item Improved the handling of object-oriented programming.
+			\item Added unit-testing with JUnit to every lab.
+	  \end{itemize}
+  
+\end{itemize}
+
 
 \end{document} 
