@@ -4,7 +4,7 @@
 
 \newcommand{\duphref}[1]{\href{#1}{#1}}
 \newcategory[Software Projects]{software}
-\newcategory[Lab Manuals]{labmanuals}
+\newkind{Lab Manuals}
 
 \begin{document}
 
@@ -24,19 +24,24 @@ Kentwood, MI 49512         \\
 jdfrens@gmail.com             \\
 }
 
-
-
+\renewcommand{\labelitemi}{}
+\setlength{\leftmarginii}{\leftmargini}
 
 \begin{vita}
 
 
 
 \begin{Degrees}
-\item Ph.D.\ in Computer Science (2002), Indiana University.
-%   Dissertation: \textit{Matrix Factorization Using a Block-Recursive
-%     Structure and Block-Recursive Algorithms}
-\item M.S.\ in Computer Science (1994), Indiana University.
-\item B.A.\ in Computer Science and Mathematics (1992), Calvin College.
+\item Ph.D.\ in Computer Science (2002), Indiana University. \par
+  {
+    Dissertation: \textit{Matrix Factorization Using a Block-Recursive
+    Structure and Block-Recursive Algorithms}
+	}
+	\item M.S.\ in Computer Science (1994), Indiana University.
+  \item B.A.\ in Computer Science and Mathematics (1992), Calvin College. \par
+	{
+	  Awarded Rinck Memorial Prize in~1992 from the Math and Computer Department.
+  }
 \end{Degrees}
 
 
@@ -44,119 +49,97 @@ jdfrens@gmail.com             \\
 
 \begin{Experience}
 
-\item \emph{Since Fall 2000.}  Assistant Professor of Computer Science at Calvin College.
-  \begin{itemize}
-  \item \emph{Fall 2006.}  Externship at Atomic Object.
-  \end{itemize}
+\item \emph{Since Fall 2000.}  Assistant Professor of Computer Science at Calvin College. \par
+  {
+    \emph{Fall 2006.}  Externship at Atomic Object.
+  }
 
 \item \emph{Fall 1998 through Fall 2000.}  Assistant Professor of Computer Science at Northwestern College (Orange City, IA).
 
-\item \emph{Fall 1992 through Fall 1998.}  Associate Instructor at Indiana University.  Includes three summers of teaching as an Instructor, with full control of a course.
-
-% \item \emph{Summer 1994.}  Developed course material for an independent study ``Introduction to Computing'' course at Indiana University.
+\item \emph{Fall 1992 through Fall 1998.}  Associate Instructor at Indiana University.\par
+	{
+		Three summers of teaching as an Instructor, with full control of a course.  Awarded Outstanding Associate Instructor in~1998.
+	}
 
 \end{Experience}
 
-
-
-
-\begin{Honors}
-
-\item Outstanding Associate Instructor (1998) from the Computer Department at Indiana University.
-
-\item Rinck Memorial Prize (1992) from the Math and Computer Department at Calvin College.
-
-\end{Honors}
-
-
 \newpage
 
-
+%=============================================================================
 
 \begin{Publications}
 
-  \item \textit{Matrix Factorization Using a Block-Recursive Structure and Block-Recursive Algorithms}.  Ph.D.\ Dissertation (2002).  Available as Technical Report 568, Computer Science Department, Indiana University. \\\duphref{http://www.cs.indiana.edu/Research/techreports/TR568.shtml}
+  \item \textit{\href{http://www.cs.indiana.edu/Research/techreports/TR568.shtml}{Matrix Factorization} Using a Block-Recursive Structure and Block-Recursive Algorithms}.  Ph.D.\ Dissertation (2002).  Available as Technical Report 568, Computer Science Department, Indiana University.
 
   \begin{Papers at Refereed Conferences}
 	
-  \item 15 Compilers in 15 Days.  \textit{Proc.\ 2006 ACM Symp.\ on Computer Science Education} (2006 March), 92--95.  With A.~Meneely. \\\duphref{http://doi.acm.org/10.1145/1121341.1121372}
+  \item \href{http://doi.acm.org/10.1145/1121341.1121372}{15 Compilers in 15 Days}.  \textit{Proc.\ 2006 ACM Symp.\ on Computer Science Education} (2006 March), 92--95.  With A.~Meneely.
 
-  \item Taming the tiger: teaching the next version of Java.  \textit{Proc.\ 2004 ACM Symp.\ on Computer Science Education} (2004 March), 151--155.  \\\duphref{http://doi.acm.org/10.1145/971300.971356}
+  \item \href{http://doi.acm.org/10.1145/971300.971356}{Taming the tiger: teaching the next version of Java}.  \textit{Proc.\ 2004 ACM Symp.\ on Computer Science Education} (2004 March), 151--155.  
 
-  \item Factorization with Morton-ordered quadtree matrices for memory re-use and parallelism. \textit{Proc.\ 2003 ACM Symp.\ on Principles and Practice of Parallel Programming} (2003 June), 144--154.  With D.S.\ Wise.  \\\duphref{http://doi.acm.org/10.1145/781498.781525}
+  \item \href{http://doi.acm.org/10.1145/781498.781525}{Factorization with Morton-ordered} quadtree matrices for memory re-use and parallelism. \textit{Proc.\ 2003 ACM Symp.\ on Principles and Practice of Parallel Programming} (2003 June), 144--154.  With D.S.\ Wise.
 
-  \item Object centered design for Java: teaching OOD in CS-1. \textit{Proc. 2003 ACM Symp.\ on Computer Science Education} (2003 February), 273--277.  With J.\ Adams.  \\\duphref{http://doi.acm.org/10.1145/611892.611986}
+  \item \href{http://doi.acm.org/10.1145/611892.611986}{Object centered design} for Java: teaching OOD in CS-1. \textit{Proc. 2003 ACM Symp.\ on Computer Science Education} (2003 February), 273--277.  With J.\ Adams.
 
-  \item Language support for Morton-order matrices. \textit{Proc. 2001 ACM Symp.\ on Principles and Practice of Parallel Programming, SIGPLAN Not.} 36, 7 (2001 July), 24--33.  With D.S.\ Wise, Y.\ Gu, and G.A.\ Alexander.  \\\duphref{http://doi.acm.org/10.1145/379539.379559}
+  \item \href{http://doi.acm.org/10.1145/379539.379559}{Language support for Morton-order matrices}. \textit{Proc. 2001 ACM Symp.\ on Principles and Practice of Parallel Programming, SIGPLAN Not.} 36, 7 (2001 July), 24--33.  With D.S.\ Wise, Y.\ Gu, and G.A.\ Alexander.
 
-  \item Auto-blocking matrix-multiplication, or Tracking BLAS3 performance from source code. \textit{Proc. 1997 ACM Symp.\ on Principles and Practice of Parallel Programming\nocorr}, \textit{ACM SIGPLAN Notices} \textbf{32}, 7, (July 1997) 206-216.  With D.S.~Wise. \\\duphref{http://doi.acm.org/10.1145/263764.263789}
+  \item \href{http://doi.acm.org/10.1145/263764.263789}{Auto-blocking matrix-multiplication}, or Tracking BLAS3 performance from source code. \textit{Proc. 1997 ACM Symp.\ on Principles and Practice of Parallel Programming\nocorr}, \textit{ACM SIGPLAN Notices} \textbf{32}, 7, (July 1997) 206-216.  With D.S.~Wise.
 
   \end{Papers at Refereed Conferences}
 
   \begin{Technical Reports}
 
-  \item Morton-order Matrices Deserve Compilers' Support. Technical Report 533, Computer Science Department, Indiana University (November 1999).  With D.S.~Wise.  \\\duphref{http://www.cs.indiana.edu/Research/techreports/TR533.shtml}
+  \item \href{http://www.cs.indiana.edu/Research/techreports/TR533.shtml}{Morton-order Matrices Deserve Compilers' Support}. Technical Report 533, Computer Science Department, Indiana University (November 1999).  With D.S.~Wise.
 
-  \item Matrix inversion using quadtrees implemented in Gofer.  Technical Report 433, Computer Science Department, Indiana University (May 1995).  With D.S.~Wise.  \\\duphref{http://www.cs.indiana.edu/Research/techreports/TR433.shtml}
+  \item \href{http://www.cs.indiana.edu/Research/techreports/TR433.shtml}{Matrix inversion using quadtrees implemented in Gofer}.  Technical Report 433, Computer Science Department, Indiana University (May 1995).  With D.S.~Wise.
 
   \end{Technical Reports}
 
-  \begin{labmanuals}
+  \begin{Lab Manuals}
   
-  \item \textit{Agile Development of Interpreters}, a lab manual for a Programming-Language course.  In progress.  \\\duphref{http://cs.calvin.edu/curriculum/cs/214/jdfrens/Labs/}.
+  \item \href{http://cs.calvin.edu/curriculum/cs/214/jdfrens/Labs/Interpreters}{\textit{Agile Development of Interpreters}}, a lab manual for a programming language course using incremental, test-driven development.  In progress.
   
   % TODO: URL goes to a brain-dead webpage
-  \item \textit{Hands on Testing Java}, a lab manual for a first-semester programming course using Java and JUnit.  In progress.  \\\duphref{http://cs.calvin.edu/curriculum/cs/108/HoTJ/}.
+  \item \href{http://cs.calvin.edu/curriculum/cs/108/HoTJ/}{\textit{Hands on Testing Java}}, a lab manual for a first-semester programming course using Java and JUnit.  In progress.
 
-  \item \textit{Hands on C++} (2003), 3e.  Prentice Hall.  With J.\ Adams.  \\\duphref{http://cs.calvin.edu/books/c++/intro/3e/HandsOnC++/}
+  \item \href{http://cs.calvin.edu/books/c++/intro/3e/HandsOnC++/}{\textit{Hands on C++}} (2003), 3e.  Prentice Hall.  With J.\ Adams.
 
-  \end{labmanuals}
+  \end{Lab Manuals}
 
 \end{Publications}
 
+%=============================================================================
+
 \begin{software}
+	\item \href{http://citkit.sourceforge.net/}{CITkit} (Compiler and Interpreter Toolkit).  Sole developer on Java library to assist in writing compilers and interpreters, primarily for educational purposes.
+	
+	\item \href{http://citkit.sourceforge.net/ciat/}{CIAT} (Compiler and Interpreter Acceptance Tester).  Developing a Ruby gem to run acceptance tests on compilers and interpreters.
+	
   \item YAGS (Yet Another Genetics Simulator).  Project lead with two student developers.  Used Ruby on Rails to simulate the genetics of fruit flies for genetic experiments in Biology courses.
   
-  \item No Latte (\duphref{http://nolatte.sourceforge.net/}).  Sole developer on a No Latte interpreter.  No Latte is a language for writing web pages; interpreter is written in Java using JUnit, FitNesse, and ANTLR.
+  \item \href{http://nolatte.sourceforge.net/}{No Latte}.  Sole developer on a No Latte interpreter.  No Latte is a language for writing web pages; interpreter is written in Java using JUnit, FitNesse, and ANTLR.
   
-  \item ANTLR Testing (\duphref{http://antlr-testing.sourceforge.net/}).  Sole developer on a extension to JUnit for testing lexers and parsers generated by ANTLR.
+  \item \href{http://antlr-testing.sourceforge.net/}{ANTLR Testing}.  Sole developer on a extension to JUnit for testing lexers and parsers generated by ANTLR.
 
-%  \item A project lead on CCEL Desktop application.  The CCEL Desktop provides books from CCEL on a user's local machine complete with searching capabilities.  \\\duphref{http://ccel-desktop.sourceforge.net/}
 \end{software}
+
+%=============================================================================
 
 \begin{Memberships}
 
 \item \href{http://www.acm.org/}{Association for Computing Machinery} (ACM).  Includes membership in special interest groups for computers and society, computer science education, programming languages, and computer graphics.
 
-% \item IEEE Computer Society (affiliate member).
-
 \item Sigma Xi.
 
 \item User groups:
   \begin{itemize}
-  \item \href{http://www.xpwestmichigan.org/}{XP West Michigan} 
-  \item \href{http://www.gr-jug.org/}{Grand Rapids Java User Group}
-  \item \href{http://gr-ruby.org/}{Michigan Ruby User Group}
+  \item \hspace{-\leftmargini}\href{http://www.xpwestmichigan.org/}{XP West Michigan} 
+  \item \hspace{-\leftmargini}\href{http://www.gr-jug.org/}{Grand Rapids Java User Group}
+  \item \hspace{-\leftmargini}\href{http://gr-ruby.org/}{Grand Rapids Ruby User Group}
   \end{itemize}
 
 \end{Memberships}
 
-\begin{References}
-
-David S. Wise.  Professor of Computer Science, Indiana University (Bloomington).
-
-% % Dennis Gannon.  Professor and Chair of Computer Science, Indiana
-% % University (Bloomington).
-
-% % George Springer.  Professor Emeritus of Computer Science, Indiana
-% % University (Bloomington).
-
-% % David A. Bremer.  Pastor of United Presbyterian Church, Bloomington,
-% % IN.
-
-\end{References}
-
-% TODO: technical skills
 
 \end{vita}
 \end{document}

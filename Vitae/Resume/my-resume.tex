@@ -56,13 +56,25 @@
 }{
 \end{quote}
 }
+\newenvironment{project}[4]{
+\setlength{\parskip}{0pt}
+\setlength{\topsep}{0pt}
+\setlength{\itemsep}{0pt}
+\setlength{\parsep}{0pt}
+\setlength{\partopsep}{0pt}
+\item \ressubheading{#1}{#2}{#3}{#4}
+}{\medskip}
 
 \renewcommand{\labelitemi}{}
 \setlength{\leftmargini}{0mm}
 
+%=============================================================================
+%=============================================================================
+
+
 \begin{document} 
 \begin{tabular*}
-	{7in}{l@{\extracolsep{\fill}}r} \textbf{\Large Jeremy D.~Frens} & 616-308-3979\\
+	{7in}{l@{\extracolsep{\fill}}r} \textbf{\Huge Jeremy D.~Frens, Ph.D.} & 616-308-3979\\
 	2720 Harbor Dr. \#304 & jdfrens@gmail.com \\
 	Grand Rapids, MI 49512 & http://www.norecess.org/\\
 \end{tabular*}
@@ -72,6 +84,7 @@
 
 
 
+%=============================================================================
 
 \resheading{Summary}
 
@@ -83,49 +96,52 @@ Software developer trapped in body of academic, looking to break free.
 \setlength{\parsep}{0mm}
 \begin{itemize}
 \renewcommand{\labelitemi}{$\bullet$}
-	\item Project lead on several open source projects.
-	\item Using agile development, especially test-driven development.
-	\item Programming in Java, Ruby, \LaTeX, C/C++, Scheme, and others.
-	\item System administration on Linux (Gentoo, Ubuntu, SuSE) and on Mac~OS~X.
-	\item Teaching and writing, over 15 years experience at the college level.
+	\item Project leader on several open source projects.
+	\item Agile developer with excellent experience with test-driven development.
+	\item Programmer in Java, Ruby, \LaTeX, C/C++, Scheme, Haskell, and others.
+	\item System administrator on Linux (Gentoo, Ubuntu, SuSE) and on Mac~OS~X systems.
+	\item Teacher, over 15 years experience at the college level.
+	\item Writer of academic research as well as laboratory manuals for programming courses.
 \end{itemize}
 }
 
 
 
-\resheading{Leadership Experience}
+%=============================================================================
+% \resheading{Leadership Experience}
+% 
+% \begin{itemize}
+% 
+% 	\item Project Leadership 
+% 	\begin{itemize}
+% 		\item Teaching as an assistant during graduate school and now as a professor. 
+% 		\item Mentoring students in senior projects at Calvin involving large software products.
+% 		\item Project lead on YAGS, a Ruby-on-Rails project using agile development.
+% 		\item Leading own open source projects: CITkit, CIAT, No Latte, and ANTLR Testing.
+% 	\end{itemize}
+% 
+% 	\item Written Leadership
+% 	  \begin{itemize}
+% 	  	\item Wrote reference material for a website administration course.
+% 	 		\item Retooled laboratory exercises for introductory programming course in C++ (\textit{Hands on C++}).
+% 	 		\item Retooled and rewrote laboratory exercises for introductory programming course in Java, adding JUnit as a primary development tool (\textit{Hands on Testing Java}).
+% 			\item Developed and wrote laboratory exercises for programming-languages course to develop interpreters iteratively using test-driven development (\textit{Incremental Development of Interpreters}).
+% 			\item Wrote documentation for open source projects.
+% 	  \end{itemize}
+% 
+% \end{itemize}
 
-\begin{itemize}
 
-	\item Project Leadership 
-	\begin{itemize}
-		\item Teaching as an assistant during graduate school and now as a professor. 
-		\item Mentoring students in senior projects at Calvin involving large software products.
-		\item Project lead on YAGS, a Ruby-on-Rails project using agile development.
-		\item Leading own open source projects: CITkit, CIAT, No Latte, and ANTLR Testing.
-	\end{itemize}
-
-	\item Written Leadership
-	  \begin{itemize}
-	  	\item Wrote reference material for a website administration course.
-	 		\item Retooled laboratory exercises for introductory programming course in C++ (\textit{Hands on C++}).
-	 		\item Retooled and rewrote laboratory exercises for introductory programming course in Java, adding JUnit as a primary development tool (\textit{Hands on Testing Java}).
-			\item Developed and wrote laboratory exercises for programming-languages course to develop interpreters iteratively using test-driven development (\textit{Incremental Development of Interpreters}).
-			\item Wrote documentation for open source projects.
-	  \end{itemize}
-
-\end{itemize}
-
-
+%=============================================================================
 \resheading{Significant Projects} 
 \begin{itemize}
-	
-	\item \ressubheading{YAGS}{Calvin College}{Project Lead and Programmer}{Summer 2007}
+
+	\begin{project}{YAGS}{Calvin College}{Project Lead and Programmer}{Summer 2007}
 		\begin{comment}
 			YAGS (Yet Another Genetics Simulator) is a Ruby-on-Rails webapp that simulates Mendelian genetics to teach genetics to college-level biology students.
 		\end{comment}
 		\begin{itemize}
-			\resitem{Lead the project.}
+			\resitem{Managed two student programmers.}
 			\resitem{Used Extreme Programming.}
 				\begin{itemize}
 					\resitem{Weekly planning meetings with on-site client.}
@@ -135,18 +151,20 @@ Software developer trapped in body of academic, looking to break free.
 				\end{itemize}
 			\resitem{Developed and reviewed code; maintained subversion repository and CruiseControl.rb server.}
 		\end{itemize}
-	
-	\item \ressubheading{No Latte}{SourceForge}{Sole Programmer}{Summer 2003--present}
+	\end{project}
+
+	\begin{project}{No Latte}{SourceForge}{Sole Programmer}{Summer 2003--present}
 	  \begin{comment}
-	  	\href{http://nolatte.sourceforge.net/}{No Latte} is an interpreter for a variation of the \href{http://www.latte.org}{Latte} language for writing XHTML documents in a functional-programming style---\LaTeX sensibilities with LISP semantics.
+	  	\href{http://nolatte.sourceforge.net/}{No Latte} is an interpreter for a variation of the \href{http://www.latte.org}{Latte} language for writing XHTML documents in a functional-programming style---\LaTeX\ sensibilities with LISP semantics.
 	  \end{comment}
 		\begin{itemize}
 			\resitem{Written in Java.}
-			\resitem{Using test-driven development with JUnit, EasyMock, and FitNesse.}
-			\resitem{Using \href{http://www.antlr.org/}{ANTLR} for the front-end.}
+			\resitem{Uses test-driven development with JUnit, EasyMock, and FitNesse.}
+			\resitem{Uses \href{http://www.antlr.org/}{ANTLR} for the front-end.}
 		\end{itemize}
+	\end{project}
 	
-	\item \ressubheading{ANTLR Testing}{SourceForge}{Sole Programmer}{Summer 2003--present}
+	\begin{project}{ANTLR Testing}{SourceForge}{Sole Programmer}{Summer 2003--present}
 		\begin{comment}
 			\href{http://antlr-testing.sourceforge.net/}{ANTLR Testing} is a unit-testing library for \href{http://www.antlr.org/}{ANTLR} grammars based on \href{http://junit.org/}{JUnit}.
 		\end{comment}
@@ -154,8 +172,9 @@ Software developer trapped in body of academic, looking to break free.
 			\resitem{Written in Java.}
 			\resitem{Used in No Latte project as well as in programming-language course.}
 		\end{itemize}
+	\end{project}
 	
-	\item \ressubheading{Department Website}{Calvin College}{Sole Programmer}{January 2007--present}
+	\begin{project}{Department Website}{Calvin College}{Sole Programmer}{January 2007--present}
 	  \begin{comment}
 	  	A modest CMS for a department website at Calvin College.
 	  \end{comment}
@@ -163,8 +182,9 @@ Software developer trapped in body of academic, looking to break free.
 	  	\resitem{Written as a Ruby-on-Rails webapp.}
 			\resitem{Fully test driven.}
 	  \end{itemize}
+	\end{project}
 
-	\item \ressubheading{CIAT}{GitHub}{Sole Programmer}{Summer 2008--present}
+	\begin{project}{CIAT}{GitHub}{Sole Programmer}{Summer 2008--present}
 	  \begin{comment}
 	  	\href{https://github.com/jdfrens/ciat/tree}{CIAT} is a testing framework for writing acceptance tests for interpreters and compilers.
 	  \end{comment}
@@ -172,6 +192,7 @@ Software developer trapped in body of academic, looking to break free.
 	  	\resitem{Written as a Ruby gem.}
 			\resitem{To be used in a programming-languages course, Spring~2009.}
 	  \end{itemize}
+	\end{project}
 
 \end{itemize}
 
@@ -252,6 +273,7 @@ Software developer trapped in body of academic, looking to break free.
 
 \resheading{Publications and Presentations}
 
+% FIXME: Put curriculum vitae on norecess.org, and add link to it here.
 A complete curriculum vitae is available upon request.  Copies and access available upon request.
 
 \begin{itemize}
