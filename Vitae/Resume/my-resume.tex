@@ -52,9 +52,20 @@
 \newcommand{\duphref}[1]{\href{#1}{#1}}
 %-----------------------------------------------------------
 \newenvironment{comment}{
-\begin{quote}\it
+\begin{quote}
 }{
 \end{quote}
+}
+\newenvironment{technologies}{
+\begin{comment}
+  \textbf{Technologies:}
+}{
+\end{comment}
+}
+\newenvironment{descriptio}{
+\begin{comment}
+}{
+\end{comment}
 }
 \newenvironment{project}[4]{
 \setlength{\parskip}{0pt}
@@ -74,9 +85,9 @@
 
 \begin{document} 
 \begin{tabular*}
-	{7in}{l@{\extracolsep{\fill}}r} \textbf{\Huge Jeremy D.~Frens, Ph.D.} & 616-308-3979\\
-	2720 Harbor Dr. \#304 & jdfrens@gmail.com \\
-	Grand Rapids, MI 49512 & http://www.norecess.org/\\
+	{7in}{l@{\extracolsep{\fill}}r} \textbf{\Large Jeremy D.~Frens, Ph.D.} & 616-308-3979\\
+	2720 Harbor Dr. \#304 & \href{mailto:jdfrens@gmail.com}{jdfrens@gmail.com} \\
+	Kentwood, MI 49512 & \href{http://www.norecess.org/}{http://www.norecess.org/}\\
 \end{tabular*}
 \\
 
@@ -88,7 +99,7 @@
 
 \resheading{Summary}
 
-Software developer trapped in body of academic, looking to break free.
+Software developer, recently in academe, looking to concentrate in development of software.
 
 {
 \setlength{\leftmargini}{10mm}
@@ -96,12 +107,12 @@ Software developer trapped in body of academic, looking to break free.
 \setlength{\parsep}{0mm}
 \begin{itemize}
 \renewcommand{\labelitemi}{$\bullet$}
-	\item Project leader on several open source projects.
-	\item Agile developer with excellent experience with test-driven development.
+	\item Agile developer with excellent experience in test-driven development.
 	\item Programmer in Java, Ruby, \LaTeX, C/C++, Scheme, Haskell, and others.
-	\item System administrator on Linux (Gentoo, Ubuntu, SuSE) and on Mac~OS~X systems.
-	\item Teacher, over 15 years experience at the college level.
-	\item Writer of academic research as well as laboratory manuals for programming courses.
+	\item Skilled in object-oriented and functional-programming paradigms.
+	\item System administrator on Linux (Gentoo, Ubuntu, SuSE) and Mac~OS~X systems.
+	\item Educator with over fifteen years experience at the college level.
+	\item Writer of academic research and laboratory manuals for programming courses.
 \end{itemize}
 }
 
@@ -133,71 +144,103 @@ Software developer trapped in body of academic, looking to break free.
 
 
 %=============================================================================
-\resheading{Significant Projects} 
+\resheading{Significant Projects}
 \begin{itemize}
 
 	\begin{project}{YAGS}{Calvin College}{Project Lead and Programmer}{Summer 2007}
-		\begin{comment}
-			YAGS (Yet Another Genetics Simulator) is a Ruby-on-Rails webapp that simulates Mendelian genetics to teach genetics to college-level biology students.
-		\end{comment}
+		\begin{descriptio}
+		  \href{htttp://www.github.com/jdfrens/yags/}{YAGS (Yet Another Genetics Simulator)} is a Ruby-on-Rails webapp that simulates Mendelian genetics in fruit flies to teach genetics to college-level biology students.  Genetic model is sophisticated enough to simulate linked genes and chromosomal crossover.  Instructors set up their own scenarios for their students, and students submit solutions for the problems posed by their instructors.
+		\end{descriptio}
 		\begin{itemize}
 			\resitem{Managed two student programmers.}
 			\resitem{Used Extreme Programming.}
 				\begin{itemize}
 					\resitem{Weekly planning meetings with on-site client.}
 					\resitem{Test-driven development.}
-					\resitem{Continuous integration with \href{http://cruisecontrolrb.thoughtworks.com/}{CruiseControl.rb}}
+					\resitem{Continuous integration.}
 					\resitem{Week-long iterations.}
 				\end{itemize}
-			\resitem{Developed and reviewed code; maintained subversion repository and CruiseControl.rb server.}
+			\resitem{Developed and reviewed code.}
 		\end{itemize}
+		\begin{technologies}
+  	  Aptana, Ruby, Rails 1.2, Test::Unit, shoulda, MySQL, CruiseControl.rb, subversion, git, GitHub, Apache (for subversion and for deployment), Linux (Ubuntu).
+	  \end{technologies}
 	\end{project}
 
 	\begin{project}{No Latte}{SourceForge}{Sole Programmer}{Summer 2003--present}
-	  \begin{comment}
+	  \begin{descriptio}
 	  	\href{http://nolatte.sourceforge.net/}{No Latte} is an interpreter for a variation of the \href{http://www.latte.org}{Latte} language for writing XHTML documents in a functional-programming style---\LaTeX\ sensibilities with LISP semantics.
-	  \end{comment}
+	  \end{descriptio}
 		\begin{itemize}
-			\resitem{Written in Java.}
-			\resitem{Uses test-driven development with JUnit, EasyMock, and FitNesse.}
+		  \resitem{Testing with mock objects and user-level acceptance tests.}
 			\resitem{Uses \href{http://www.antlr.org/}{ANTLR} for the front-end.}
 		\end{itemize}
+		\begin{technologies}
+		  Eclipse, Java, ANTLR, JUnit, ANTLR Testing, EasyMock, FitNesse, bash shell-scripting, CVS, subversion, SourceForge.
+		\end{technologies}
 	\end{project}
 	
-	\begin{project}{ANTLR Testing}{SourceForge}{Sole Programmer}{Summer 2003--present}
-		\begin{comment}
-			\href{http://antlr-testing.sourceforge.net/}{ANTLR Testing} is a unit-testing library for \href{http://www.antlr.org/}{ANTLR} grammars based on \href{http://junit.org/}{JUnit}.
-		\end{comment}
-		\begin{itemize}
-			\resitem{Written in Java.}
-			\resitem{Used in No Latte project as well as in programming-language course.}
-		\end{itemize}
-	\end{project}
+	\newpage
 	
 	\begin{project}{Department Website}{Calvin College}{Sole Programmer}{January 2007--present}
-	  \begin{comment}
-	  	A modest CMS for a department website at Calvin College.
-	  \end{comment}
+	  \begin{descriptio}
+	  	The Computer Science department's \href{http://cs.calvin.edu/}{website} at Calvin College is a Ruby-on-Rails webapp (source on \href{http://www.github.com/jdfrens/calvincs}{GitHub}).  Provides a modest CMS with news and events as well as specialized features for an academic institution (e.g., faculty details, course information).
+	  \end{descriptio}
 	  \begin{itemize}
-	  	\resitem{Written as a Ruby-on-Rails webapp.}
-			\resitem{Fully test driven.}
+	    \resitem{Used as a sandbox for developing material for Programming Languages course and a January-term Ruby-on-Rails course.}
+	    \resitem{Used behavior-driven development with RSpec and Cucumber.}
+	  	\resitem{Administered production server.}
 	  \end{itemize}
+	  \begin{technologies}
+	    Aptana, NetBeans, RubyMine, Ruby, Rails 1.2--2.3, Test::Unit, RSpec, Cucumber, MySQL, sqlite, CruiseControl.rb, subversion, git, GitHub, Apache (for subversion and for deployment), Linux (SuSE and openSuSE).
+	  \end{technologies}
 	\end{project}
 
+	\begin{project}{ANTLR Testing}{SourceForge}{Sole Programmer}{Summer 2003--present}
+		\begin{descriptio}
+			\href{http://antlr-testing.sourceforge.net/}{ANTLR Testing} is a unit-testing library for \href{http://www.antlr.org/}{ANTLR} grammars based on \href{http://junit.org/}{JUnit}.
+		\end{descriptio}
+		\begin{itemize}
+			\resitem{Used in No Latte project.}
+			\resitem{Used in Programming Language course by students at Calvin College.}
+			\resitem{Used by other ANTLR developers.}
+		\end{itemize}
+		\begin{technologies}
+		  Eclipse, Java, ANTLR, JUnit, subversion, SourceForge.
+		\end{technologies}
+	\end{project}
+	
 	\begin{project}{CIAT}{GitHub}{Sole Programmer}{Summer 2008--present}
-	  \begin{comment}
-	  	\href{https://github.com/jdfrens/ciat/tree}{CIAT} is a testing framework for writing acceptance tests for interpreters and compilers.
-	  \end{comment}
+	  \begin{descriptio}
+	  	\href{http://jdfrens.github.com/ciat/}{CIAT} is a framework for writing acceptance tests for interpreters and compilers.
+	  \end{descriptio}
 	  \begin{itemize}
 	  	\resitem{Written as a Ruby gem.}
-			\resitem{To be used in a programming-languages course, Spring~2009.}
+			\resitem{Used in Programming Languages course by students at Calvin College.}
 	  \end{itemize}
+	  \begin{technologies}
+	    TextMate, Ruby, RubyGems, rake, RSpec, git, GitHub.
+	  \end{technologies}
+	\end{project}
+
+	\begin{project}{CITkit}{SourceForge}{Sole Programmer}{Fall 2004--present}
+	  \begin{descriptio}
+	  	\href{http://citkit.sourceforge.net/}{CITkit} is a Java library to facilitate the building of interpreters and compilers.
+	  \end{descriptio}
+	  \begin{itemize}
+	  	\resitem{Provides a tree intermediate representation of a programming language using the visitor pattern.}
+	  	\resitem{Provides a symbol-table environment for nested variable scopes.}
+			\resitem{Used in Compiler and Programming Languages courses at Calvin College.}
+	  \end{itemize}
+	  \begin{technologies}
+	    Eclipse, Java, JUnit, subversion, SourceForge.
+	  \end{technologies}
 	\end{project}
 
 \end{itemize}
 
 
-\resheading{Work Experience in Academia}
+\resheading{Work Experience}
 
 % TODO: courses taught
 % TODO: professional organizations
@@ -205,35 +248,42 @@ Software developer trapped in body of academic, looking to break free.
 	\item \ressubheading{Assistant Professor}{Calvin College}{Grand Rapids, MI}{2000--present} 
 	  \begin{itemize}
 		\resitem{Taught a variety of courses: introductory programming in C++ and Java, website administration, programming languages, automata and grammars, compilers.}
-			% 		  \begin{itemize}
-			% 		  \item Introductory programming in C++ and in Java.
-			% \item Technical courses in office tools (e.g., Excel, Dreamweaver, PowerPoint).
-			% \item Website administration.
-			% \item Programming languages; compilers.
-			% 		  \end{itemize}
 		\resitem{Added to the curriculum.}
 		\begin{itemize}
-			\item Introduced unit testing in introductory programming course.
-			\item Added many agile techniques to programming-languages course.
+			\resitem{Introduced unit testing in introductory programming course.}
+			\resitem{Added many agile techniques to programming-languages course.}
 		\end{itemize}
-		\resitem{Typical professor duty: student advising, department and college committees.}
-		\resitem{Served as advisor to computer-science student club; awarded ``Outstanding Advisor'' award in 2004.}
+		\resitem{Advised students, and served on department and college committees.}
+		\resitem{Advised computer-science student club.}
+	  \begin{itemize}
+	   \resitem{``Outstanding Advisor'' award in 2004.}
+	  \end{itemize}
 	\end{itemize}
 	
-	\item \ressubheading{Java Instructor}{Rapistan/Seimens}{Grand Rapids, MI}{????}
+	\item \ressubheading{Externship at Atomic Object}{Calvin College, Atomic Object}{Grand Rapids, MI}{Fall 2006}
+	  \begin{itemize}
+	   \resitem{Spent a semester at \href{http://www.atomicobject.com}{Atomic Object}, an agile custom-software shop in Grand Rapids.}
+	   \resitem{Observed and participated in their software development.}
+	   \resitem{Projects very varied:}
+	     \begin{itemize}
+	       \resitem{Desktop application for USB communication written in C, C++, and Java.}
+	       \resitem{Embedded development in C.}
+	       \resitem{Basic Ruby-on-Rails webapps.}
+	       \resitem{Ruby-on-Rails webapp for legacy database.}
+	       \resitem{Oracle development for health-insurance client.}
+	     \end{itemize}
+	  \end{itemize}
+	
+	\item \ressubheading{Java Instructor}{Rapistan/Seimens}{Grand Rapids, MI}{2003, 2004}
 	\begin{itemize}
-		\resitem Taught Java and object-oriented programming to VisualBasic developers.
+	  \resitem{Rapistan (a local company, bought out by Seimens) needed to transition developers from VisualBasic to Java.}
+		\resitem{Taught 12-week course twice with colleague from Calvin College.}
+		\resitem{Covered basics of object-oriented programming and standard Java libraries.}
 	\end{itemize}
 	
 	\item \ressubheading{Assistant Professor}{Northwestern College}{Orange City, IA}{1998--2000} 
 	\begin{itemize}
-		\resitem{Taught mostly upper-level courses.}
-		  % \begin{itemize}
-		  % 				\item Data structures.
-		  % 	\item Programming languages.
-		  % 				\item Computer architecture.
-		  % 				\item Ray tracing.
-		  % \end{itemize}
+		\resitem{Taught mostly upper-level courses including data structures, programming languages, computer architecture, and ray tracing.}
 		\resitem{Served on department and college committees.}
 	\end{itemize}
 	
@@ -241,14 +291,14 @@ Software developer trapped in body of academic, looking to break free.
 	\begin{itemize}
 		\resitem{Assisted and graded various courses: introductory programming, programming languages, data structures.}
 		\resitem{Taught courses in summer as primary instructor: introductory programming, data structures.}
-		\resitem{Awarded ``Outstanding Associate Instruction'' from Computer Science Department in 1998.}
+		\resitem{Awarded ``Outstanding Associate Instructor'' from Computer Science Department in 1998.}
 	\end{itemize}
 \end{itemize}
 
 
 \resheading{Education} 
 \begin{itemize}
-	\item \ressubheading{Indiana University}{Bloomington, IN}{Ph.D., Computer Science}{2002} 
+	\item \ressubheading{Ph.D., Computer Science}{Bloomington, IN}{Indiana University}{2002} 
 	\begin{itemize}
 		\resitem{Specialized in Functional Programming, Programming Languages, and Scientific Computing.}
 		\resitem{Examined the memory and parallelism benefits of a block-recursive decomposition of matrix structures and algorithms.}
@@ -259,52 +309,58 @@ Software developer trapped in body of academic, looking to break free.
 			% 		  \end{itemize}
 	\end{itemize}
 	
-	\item \ressubheading{Indiana University}{Bloomington, IN}{M.S., Computer Science}{1994}	
+	\item \ressubheading{M.S., Computer Science}{Bloomington, IN}{Indiana University}{1994}	
 	   \begin{itemize}
 	   \resitem{Important courses: Programming Languages, Compilers (2~semesters), Computer Graphics (2~semesters)}
 	   \end{itemize}
 	
-	\item \ressubheading{Calvin College}{Grand Rapids, MI}{B.A., Computer Science and Mathematics}{1992} 
+	\item \ressubheading{B.A., Computer Science and Mathematics}{Grand Rapids, MI}{Calvin College}{1992} 
   	\begin{itemize}
 	  \resitem{Important courses: Real Analysis (2~semesters), Linear Algebra, Abstract Algebra, Advanced Logic, Topology, Compilers, Databases, Operating Systems, Programming Languages}
 		\resitem{Awarded the Rinck Prize in mathematics, 1992} 
+	  \end{itemize}
+	  
+	\item \ressubheading{\href{http://www.scrumalliance.org/profiles/58889}{Certified Scrum Master}}{}{Scrum Alliance}{June 2009}
+	  \begin{itemize}
+	   \resitem{Took course from Chet Hendrickson and Ron Jeffries}
 	  \end{itemize}
 \end{itemize}
 
 \resheading{Publications and Presentations}
 
-A complete curriculum vitae is available at \duphref{http://norecess.org/jeremy-d-frens-vitae.pdf}.  Copies and access to publications available upon request.
+A complete curriculum vitae is available at \href{http://norecess.org/}{NoRecess.org} and upon request.  Copies and access to publications also available upon request.
 
 \begin{itemize}
-	\item \href{http://cs.calvin.edu/curriculum/cs/214/jdfrens/Labs/}{\textit{Incremental Development of Interpreters}}.  In progress, used in Programming Languages Course (Spring 2008, Spring 2009).
-	\begin{quote}
-		Develops interpreters incrementally using test-driven development.  Technologies include Java, JUnit, ANTLR, ANTLR Testing, and FitNesse (or CIAT).
-	\end{quote}
-	  % \begin{itemize}
-	  % 	\item Develops interpreters incrementally using test-driven development.
-	  % 			\item Uses Java, JUnit, ANTLR, ANTLR Testing, and FitNesse.
-	  % \end{itemize}
+	\item \href{http://cs.calvin.edu/curriculum/cs/214/jdfrens/Labs/}{\textit{Incremental Development of Interpreters}}.  In progress.
+	\begin{itemize}
+		\item Develops interpreters incrementally using test-driven development.
+		\item Used in Programming Languages course at Calvin College.
+		\item Technologies include Java, JUnit, ANTLR, ANTLR Testing, CIAT (or FitNesse), and Eclipse.
+	\end{itemize}
+
+	\item \href{http://norecess.org/frens-aitp-ruby-and-rails.pdf}{\textit{Ruby and Rails}}.  Invited talk at monthly meeting of AITP West Michigan, 21 February 2008.
 	
-	% TODO: link to slides?
-	\item \textit{Ruby and Rails}.  Invited talk at monthly meeting of AITP West Michigan, 21 February 2008.
-	
-	\item \duphref{http://doi.acm.org/10.1145/1121341.1121372}{``15 Compilers in 15 Days''} with Andy~Meneely (student).  \textit{Proceedings of the 2006 ACM Symposium on Computer Science Education} (2006 March), 92--95.
+	\item \href{http://doi.acm.org/10.1145/1121341.1121372}{``15 Compilers in 15 Days''} with Andy~Meneely (student).  \textit{Proceedings of the 2006 ACM Symposium on Computer Science Education} (2006 March), 92--95.
 	  \begin{itemize}
-		\item Describes success at developing compilers incrementally.
-		\item Explains pedagogical benefits of incremental development.
-		\item Used to motivate \textit{Incremental Development of Interpreters}.
+		\resitem{Describes success at developing compilers incrementally.}
+		\resitem{Explains pedagogical benefits of incremental development.}
+		\resitem{Used to motivate \textit{Incremental Development of Interpreters}.}
   	\end{itemize}
 	
 	\item \href{http://cs.calvin.edu/books/c++/intro/3e/HandsOnC++/}{\textit{Hands on C++} (2003), 3e}, with Joel C.\ Adams.  Prentice Hall.
 	  \begin{itemize}
-	  	\item Significant re-write of 2nd edition.
+	    \resitem{Lab manual for introductory programming course in C++.}
+	    \resitem{Used at Calvin College for engineers.}
+	  	\resitem{Significant re-write of 2nd edition.}
 	  \end{itemize}
 	  
 	\item \href{http://cs.calvin.edu/curriculum/cs/108/HoTJ/}{\textit{Hands on Testing Java}} based on material by Joel C.\ Adams and Charles Hoot.
 	  \begin{itemize}
-	  	\item Significant re-write of original \textit{Hands on Java}.
-			\item Improved the handling of object-oriented programming.
-			\item Added unit-testing with JUnit to every lab.
+	    \resitem{Lab manual for introductory programming course in Java.}
+	    \resitem{Used at Calvin College for Computer Science and Mathematics majors.}
+	  	\resitem{Significant re-write of original \textit{Hands on Java}.}
+			\resitem{Improved the handling of object-oriented programming.}
+			\resitem{Added unit-testing with JUnit to every lab.}
 	  \end{itemize}
   
 \end{itemize}
